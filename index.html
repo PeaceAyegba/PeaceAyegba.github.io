@@ -10,18 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0d12;
-      --card:#121521;
-      --muted:#aab3c0;
-      --text:#e9eef5;
-      --accent:#7aa2ff;
-      --accent-2:#5ce1e6;
-      --border:#1f2433;
+      --bg:#0b0d12; --card:#121521; --muted:#aab3c0; --text:#e9eef5;
+      --accent:#7aa2ff; --accent-2:#5ce1e6; --border:#1f2433;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0d12 0%,#0e1320 60%,#0b0d12 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
     .container{max-width:1000px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(11,13,18,.7);backdrop-filter:blur(8px);z-index:10}
     .brand{display:flex;align-items:center;gap:14px}
@@ -43,10 +37,7 @@
     h3{margin:0 0 14px;font-size:20px}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
     .card{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px}
-    @media(min-width:720px){
-      .card.span-6{grid-column:span 6}
-      .card.span-4{grid-column:span 4}
-    }
+    @media(min-width:720px){ .card.span-6{grid-column:span 6} .card.span-4{grid-column:span 4} }
     .card h4{margin:0 0 8px;font-size:16px}
     .card p{margin:0 0 8px;color:var(--muted)}
     .meta{font-size:12px;color:#9fb0c7}
@@ -55,7 +46,7 @@
     .small{font-size:12px;color:#9fb0c7}
     .pill{padding:2px 8px;border:1px solid var(--border);border-radius:999px;background:#0f1424;font-size:12px;margin-left:6px}
     .muted{color:var(--muted)}
-    /* Accessibility */
+    ul.compact{margin:8px 0 0 18px} ul.compact li{margin-bottom:6px}
     :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
   </style>
   <script type="application/ld+json">
@@ -64,15 +55,8 @@
     "@type":"Person",
     "name":"Peace Ayegba",
     "jobTitle":"Research Scientist (Algorithms, Optimisation, ML/NLP)",
-    "affiliation": [
-      {"@type":"CollegeOrUniversity","name":"University of Glasgow"},
-      {"@type":"CollegeOrUniversity","name":"Landmark University"}
-    ],
-    "url":"",
-    "sameAs":[
-      "https://github.com/PeaceAyegba",
-      "https://www.kaggle.com/peace1a"
-    ]
+    "affiliation":[{"@type":"CollegeOrUniversity","name":"University of Glasgow"}],
+    "sameAs":["https://github.com/PeaceAyegba","https://www.kaggle.com/peace1a"]
   }
   </script>
 </head>
@@ -91,21 +75,24 @@
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
+    <!-- ABOUT -->
     <section class="hero" id="about">
       <div class="hero-card">
-        <h2>Research‑minded and hands‑on.</h2>
+        <h2>Research Scientist.</h2>
         <p>
-          I’m completing my PhD in Computing Science at the University of Glasgow, where I study the structure and complexity of combinatorial optimisation problems. 
-          I enjoy combining deep algorithmic analysis with applied machine learning, especially in NLP and evaluation tasks
+          I’m completing my PhD in Computing Science at the University of Glasgow, where I study the structure and complexity of combinatorial optimisation problems.
+          I work on formal analysis of algorithms and also build data/ML projects in practice—especially NLP and evaluation.
         </p>
         <div class="tagrow" aria-label="Research interests">
           <span class="tag">Algorithms & Complexity</span>
           <span class="tag">Combinatorial Optimisation</span>
-          <span class="tag">Stable Matching & SPA</span>
+          <span class="tag">Stable Matching / SPA</span>
           <span class="tag">NLP & LLM Evaluation</span>
           <span class="tag">Data Science</span>
         </div>
@@ -118,63 +105,83 @@
       <div class="hero-card">
         <h3 style="margin-top:0">Open to roles</h3>
         <p class="muted">Research Scientist • Applied Scientist • Data/ML Engineer</p>
-        <ul>
-          <li>Algorithm design & analysis, exact/approximation methods</li>
-          <li>NLP projects (RoBERTa fine‑tuning, LLM‑based detection)</li>
-          <li>Clean, reproducible data workflows & evaluation</li>
+        <ul class="compact">
+          <li>Algorithm design & analysis (exact / approximation)</li>
+          <li>NLP projects (RoBERTa fine-tuning, LLM-based detection)</li>
+          <li>Reproducible data pipelines and evaluation</li>
         </ul>
-        <p class="small">Location: UK • Eligible for roles in the UK and remote</p>
+        <p class="small">Location: UK</p>
       </div>
     </section>
 
+    <!-- PUBLICATIONS -->
     <section id="publications">
-      <h3>Publications</h3>
-      <div class="grid">
-        <div class="card">
-          <h4>See selected publications</h4>
-          <p>Formal results on structural properties and complexity of SPA variants; special‑issue paper in Discrete Applied Mathematics.</p>
-          <p class="meta">Links:</p>
-          <p>
-            <a href="https://scholar.google.com/scholar?q=Peace+Chenemi+Ayegba" target="_blank" rel="noopener">Google Scholar</a>
-            <span class="pill">recommended</span>
-          </p>
-          <!-- If you have a personal publications page, add it here -->
-        </div>
+      <h3>Selected Publications</h3>
+      <div class="card">
+        <ul class="compact">
+          <li>
+            <strong>Peace Ayegba</strong>, Sofiat Olaosebikan, David Manlove.
+            <em>Structural aspects of the Student–Project Allocation problem</em>. In review, May 2025.
+            <a href="https://arxiv.org/abs/2501.18343" target="_blank" rel="noopener">arXiv</a>
+          </li>
+          <li>
+            Micheal Olaolu Arowolo, <strong>Peace Ayegba</strong>, Shakirat Ronke Yusuff, Sanjay Misra.
+            <em>A prediction model for bitcoin cryptocurrency prices</em>.
+            In <em>Blockchain Applications in the Smart Era</em>, Springer, 2022.
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-89546-4_7" target="_blank" rel="noopener">Springer</a>
+          </li>
+          <li>
+            <strong>Peace Ayegba</strong>, Joyce Ayoola, Emmanuel Asani, Aderemi Okeyinka.
+            <em>A Comparative Study of Minimal Spanning Tree Algorithms</em>.
+            In Proc. 2020 International Conference in Mathematics, Computer Engineering and Computer Science.
+            <a href="https://ieeexplore.ieee.org/abstract/document/9077616" target="_blank" rel="noopener">IEEE</a>
+          </li>
+          <li>
+            Emmanuel Asani, <strong>Peace Ayegba</strong>, Joyce Ayoola, Aderemi Okeyinka, Ayodele Adebiyi.
+            <em>A preliminary study on the complexity of some heuristics for solving combinatorial optimization problems</em>.
+            <em>International Journal of Engineering Research and Technology</em>, 12(10), 2019.
+            <a href="http://www.irphouse.com/ijert19/ijertv12n10_01.pdf" target="_blank" rel="noopener">Journal</a>
+          </li>
+          <li>
+            Adebayo Omotosho, <strong>Peace Ayegba</strong>, Justice Emuoyibofarhe, Christoph Meinel.
+            <em>Current state of ICT in healthcare delivery in developing countries</em>.
+            <em>International Journal of Online Engineering</em>, 15(8), 2019.
+            <a href="https://eprints.lmu.edu.ng/2462/1/CurrentStateofICTinHealthcareDeliveryinDevelopingCountries.pdf" target="_blank" rel="noopener">Paper</a>
+          </li>
+        </ul>
+        <p class="small" style="margin-top:12px">
+          More on
+          <a href="https://scholar.google.com/scholar?q=Peace+Chenemi+Ayegba" target="_blank" rel="noopener">Google Scholar</a>.
+        </p>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
       <h3>Selected Projects</h3>
       <div class="grid">
         <div class="card span-6">
-          <h4>RoBERTa Fine‑tuning for Harmful‑Content/Cyberbullying Detection</h4>
-          <p>Fine‑tuned <em>roberta-base</em> with careful preprocessing, class‑imbalance handling, and thresholding; compared metrics and error profiles.</p>
+          <h4>RoBERTa-based Cyberbullying Detection (2025)</h4>
+          <p>Fine-tuned <em>roberta-base</em> with careful preprocessing, class imbalance handling, and calibrated thresholds; compared metrics and error profiles.</p>
           <p class="meta">NLP • Transformers • Evaluation</p>
-          <p>
-            <a href="https://www.kaggle.com/peace1a" target="_blank" rel="noopener">Kaggle Profile</a>
-            <!-- TODO: Replace with the direct notebook link if you prefer -->
-          </p>
+          <p><a href="https://www.kaggle.com/code/peace1a/roberta-base" target="_blank" rel="noopener">Kaggle notebook</a></p>
         </div>
         <div class="card span-6">
-          <h4>Energy/Solar Data Analysis (Exploratory & Forecasting)</h4>
-          <p>Analysis of solar/energy data with feature engineering, model baselines, and visual diagnostics; emphasis on clarity and reproducibility.</p>
-          <p class="meta">Time‑series • Feature Engineering • Forecasting</p>
-          <p>
-            <!-- TODO: Update the repo link to your actual GitHub project -->
-            <a href="https://github.com/PeaceAyegba?tab=repositories" target="_blank" rel="noopener">View on GitHub</a>
-          </p>
+          <h4>Malware Detection (2025)</h4>
+          <p>Built and benchmarked ensemble models (Random Forest, XGBoost, DNN) for detecting malicious PDF files; tested robustness across datasets.</p>
+          <p class="meta">Security • Ensembles • Generalisation</p>
+          <p><a href="https://github.com/PeaceAyegba?tab=repositories" target="_blank" rel="noopener">Repository (collection)</a></p>
         </div>
         <div class="card span-6">
-          <h4>Academic Search Platform (MSc)</h4>
-          <p>Client‑side Next.js prototype integrated with scholarly APIs, embeddings, and learning‑to‑rank (MiniLM + XGBoost).</p>
-          <p class="meta">Next.js • Embeddings • LTR</p>
-          <p>
-            <a href="https://github.com/PeaceAyegba?tab=repositories" target="_blank" rel="noopener">Repository</a>
-          </p>
+          <h4>Minimum Spanning Tree (MST) Algorithms</h4>
+          <p>Comparative analysis and open-source implementations; complements conference paper.</p>
+          <p class="meta">Algorithms • Graphs</p>
+          <p><a href="https://github.com/PeaceAyegba/MST-Algorithms" target="_blank" rel="noopener">GitHub</a></p>
         </div>
       </div>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education">
       <h3>Education & Roles</h3>
       <div class="card">
@@ -194,7 +201,7 @@
         </div>
         <div class="edu-item">
           <div>
-            <strong>Database Coordinator</strong> — Refuweege
+            <strong>Database Coordinator</strong> — Refuweegee
             <div class="small">Data migration to Beacon CRM; documentation & staff training</div>
           </div>
           <div class="small">2024–present</div>
@@ -202,10 +209,35 @@
       </div>
     </section>
 
+    <!-- SKILLS -->
+    <section id="skills">
+      <h3>Technical Skills</h3>
+      <div class="card">
+        <p><strong>Programming:</strong> Python, Java, MATLAB, SAS, SQL, LaTeX</p>
+        <p><strong>ML / NLP:</strong> Hugging Face Transformers, PyTorch, scikit-learn, LoRA fine-tuning, ensemble methods</p>
+        <p><strong>Data:</strong> MySQL, Microsoft NAV, Beacon CRM, PowerBi, Tableau</p>
+        <p><strong>Tools:</strong> Git, Docker, Jupyter, Overleaf, Gurobi</p>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching">
+      <h3>Teaching & Outreach</h3>
+      <div class="card">
+        <p><strong>Graduate Teaching Assistant</strong>, University of Glasgow <span class="small">(2021–Present)</span></p>
+        <p class="small">Modules: Algorithms, Python Programming, Computing Systems, Data Structures</p>
+        <ul class="compact">
+          <li>Delivered workshops and supported coursework for undergraduate cohorts.</li>
+          <li>Co-developed practical resources (e.g., prompt-engineering workbook for charity teams).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact">
       <h3>Contact</h3>
       <div class="card span-6">
-        <p class="muted">I’m happy to chat about research collaborations and roles in research/applied science and data/ML.</p>
+        <p class="muted">Happy to chat about research collaborations and roles in research/applied science and data/ML.</p>
         <p>
           <!-- TODO: replace the email with your real address -->
           <strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a><br/>
@@ -221,8 +253,6 @@
       <div class="small">Built with semantic HTML & tiny CSS.</div>
     </footer>
   </div>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
