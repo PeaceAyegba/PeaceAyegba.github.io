@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Peace Ayegba — PhD researcher in combinatorial optimisation, algorithms, and applied ML/NLP. Based in the UK." />
+  <meta name="description" content="Peace Ayegba — Research Scientist in optimisation, algorithms, and machine learning. Based in the UK." />
   <title>Peace Ayegba — Optimisation • AI/ML • Data Science</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
     .tag{font-size:11px;padding:5px 10px;border:1px solid var(--border);border-radius:999px;background:#eef2ff;color:#1e293b}
     .cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .btn{display:inline-block;padding:9px 13px;border-radius:10px;border:1px solid var(--border);background:#f1f5f9;font-weight:600;font-size:12px;color:var(--text);cursor:pointer;transition:all .2s}
-    .btn:hover{opacity:.8}
+    .btn:hover{opacity:.85}
     .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border:none}
     .btn.ghost{background:transparent;border:1px solid var(--border)}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
@@ -59,7 +59,19 @@
   </style>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Peace Ayegba","jobTitle":"Research Assistant / PhD Researcher","affiliation":{"@type":"CollegeOrUniversity","name":"University of Glasgow"},"url":"https://peaceayegba.github.io","sameAs":["https://www.linkedin.com/in/peaceayegba","https://scholar.google.co.uk/citations?user=GadXMZ8AAAAJ","https://github.com/PeaceAyegba","https://www.kaggle.com/peace1a"]}
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Peace Ayegba",
+    "jobTitle":"Research Scientist",
+    "url":"https://peaceayegba.github.io",
+    "sameAs":[
+      "https://www.linkedin.com/in/peace-ayegba",
+      "https://scholar.google.co.uk/citations?user=GadXMZ8AAAAJ",
+      "https://github.com/PeaceAyegba",
+      "https://www.kaggle.com/peace1a"
+    ]
+  }
   </script>
 </head>
 
@@ -70,7 +82,7 @@
       <div class="brand">
         <div class="avatar" aria-hidden="true"></div>
         <div>
-          <h1>Peace Ayegba</h1>
+          <h1>Peace Ayegba <span class="small">• Research Scientist</span></h1>
           <p>Optimisation • AI/ML • Data Science</p>
         </div>
       </div>
@@ -88,10 +100,10 @@
     <!-- ABOUT / HERO -->
     <section class="hero" id="about">
       <div class="card">
-        <h2>Optimisation + AI research</h2>
+        <h2>Optimisation and AI</h2>
         <p class="lead">
-          PhD researcher and Research Assistant at the University of Glasgow.
-          I work on <strong>combinatorial optimisation</strong>, <strong>algorithm design</strong>, and <strong>applied machine learning</strong>—with an emphasis on reproducible, well-evaluated solutions.
+          I work on optimisation and algorithm design, and I build machine learning and NLP models in Python.
+          My research focuses on exact and heuristic methods for combinatorial problems, and I publish and build open projects around these methods.
         </p>
 
         <div class="kpi" aria-label="Quick facts">
@@ -102,18 +114,18 @@
 
         <div class="tagrow" aria-label="Research areas">
           <span class="tag">Combinatorial Optimisation</span>
-          <span class="tag">Exact & Heuristic Algorithms</span>
+          <span class="tag">Exact Algorithms</span>
+          <span class="tag">Heuristics</span>
           <span class="tag">Integer Programming</span>
           <span class="tag">ML / NLP</span>
           <span class="tag">Benchmarking</span>
-          <span class="tag">Research Engineering</span>
         </div>
 
         <div class="cta">
           <a class="btn primary" href="#projects">Projects</a>
           <a class="btn" href="#publications">Publications</a>
-          <a class="btn" href="./Peace_Ayegba_CV.pdf" download>Download CV</a>
-          <a class="btn" href="https://www.linkedin.com/in/peaceayegba" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="./Peace_CV.pdf" download>Download CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/peace-ayegba" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://github.com/PeaceAyegba" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
@@ -122,27 +134,21 @@
         <h3 style="margin-top:0">What I do</h3>
         <ul class="compact">
           <li><strong>Optimisation:</strong> model and solve allocation/matching problems with exact and heuristic methods.</li>
-          <li><strong>Research engineering:</strong> implement algorithms, run experiments, benchmark performance.</li>
-          <li><strong>Applied ML/NLP:</strong> regression, classification, transformer fine-tuning with rigorous evaluation.</li>
+          <li><strong>Algorithms:</strong> design algorithms and analyse complexity; implement and benchmark methods in Python.</li>
+          <li><strong>ML / NLP:</strong> regression, classification, transformer fine-tuning.</li>
         </ul>
-        <div class="item">
-          <div class="row">
-            <div><strong>Currently</strong></div>
-            <div class="small">Research Assistant, University of Glasgow</div>
-          </div>
-          <div class="small muted">Algorithm development, Python implementation, experiments, publications</div>
-        </div>
       </div>
     </section>
 
     <!-- CV SECTION -->
     <section id="cv">
-      <h3>CV & Resume</h3>
+      <h3>CV</h3>
       <div class="callout">
-        <p><strong>Download my full CV (PDF)</strong> for detailed education, experience, and publications.</p>
+        <p><strong>Download my CV (PDF)</strong></p>
+        <p class="small" style="margin-top:6px">File: <code>Peace_CV.pdf</code></p>
         <div class="cta" style="margin-top:12px">
-          <a class="btn primary" href="./Peace_Ayegba_CV.pdf" download>Download PDF</a>
-          <a class="btn" href="./Peace_Ayegba_CV.pdf" target="_blank" rel="noopener">Open in browser</a>
+          <a class="btn primary" href="./Peace_CV.pdf" download>Download PDF</a>
+          <a class="btn" href="./Peace_CV.pdf" target="_blank" rel="noopener">Open in browser</a>
         </div>
       </div>
     </section>
@@ -154,16 +160,16 @@
         <div class="card span-4">
           <h4>Optimisation & OR</h4>
           <p class="muted">Exact and heuristic methods for combinatorial problems: allocation, matching, graphs.</p>
-          <p class="meta">Integer programming • Benchmarking • Heuristics</p>
+          <p class="meta">Integer programming • Heuristics • Benchmarking</p>
         </div>
         <div class="card span-4">
           <h4>Algorithms & Complexity</h4>
-          <p class="muted">Algorithm design, structural analysis of hard problems, parameterised approaches.</p>
-          <p class="meta">Computational complexity • Empirical evaluation</p>
+          <p class="muted">Algorithm design and complexity analysis of optimisation and graph problems.</p>
+          <p class="meta">Parameterized algorithms • Computational complexity</p>
         </div>
         <div class="card span-4">
-          <h4>ML & NLP</h4>
-          <p class="muted">Transformer fine-tuning, text classification, LLM evaluation, and applications in real-world tasks.</p>
+          <h4>ML, NLP, and LLMs</h4>
+          <p class="muted">Transformer fine-tuning and text classification. Interested in LLM evaluation and LLM applications.</p>
           <p class="meta">Transformers • Evaluation • LLM applications</p>
         </div>
       </div>
@@ -189,7 +195,7 @@
 
         <div class="card span-6">
           <h4>Housing Price Prediction</h4>
-          <p class="muted">Regression models with feature engineering, hyperparameter tuning, and performance evaluation.</p>
+          <p class="muted">Regression models with feature engineering and performance evaluation.</p>
           <p class="meta">EDA • Feature Engineering • Scikit-learn</p>
           <a href="https://github.com/PeaceAyegba/house-rent-prediction" target="_blank" rel="noopener">GitHub →</a>
         </div>
@@ -199,72 +205,6 @@
           <p class="muted">Implemented and benchmarked multiple MST algorithms; supports published work on algorithm evaluation.</p>
           <p class="meta">Algorithms • Graphs • Benchmarking</p>
           <a href="https://github.com/PeaceAyegba/MST-Algorithms" target="_blank" rel="noopener">GitHub →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h3>Experience</h3>
-      <div class="card">
-        <div class="item" style="border-top:none;padding-top:0;margin-top:0">
-          <div class="row">
-            <div><strong>Research Assistant</strong></div>
-            <div class="small">2025–Present</div>
-          </div>
-          <p class="small muted" style="margin:5px 0">University of Glasgow</p>
-          <ul class="compact">
-            <li>Develop exact and heuristic algorithms for complex optimisation problems.</li>
-            <li>Implement solutions in Python; run computational experiments; analyse results.</li>
-            <li>Contribute to academic publications.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="row">
-            <div><strong>Database Coordinator</strong></div>
-            <div class="small">2025–Present</div>
-          </div>
-          <p class="small muted" style="margin:5px 0">Refuweegee (Glasgow)</p>
-          <ul class="compact">
-            <li>Lead migration of legacy data into Beacon CRM; data cleaning and validation.</li>
-            <li>Automate Gift Aid claims process for improved reporting.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="row">
-            <div><strong>Software Engineer</strong></div>
-            <div class="small">2023</div>
-          </div>
-          <p class="small muted" style="margin:5px 0">Glasgow University Software Services</p>
-          <ul class="compact">
-            <li>Optimised live web application with caching and lazy loading.</li>
-            <li>Managed Docker and AWS deployments.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="row">
-            <div><strong>Graduate Assistant</strong></div>
-            <div class="small">2022–2025</div>
-          </div>
-          <p class="small muted" style="margin:5px 0">University of Glasgow</p>
-          <ul class="compact">
-            <li>Taught tutorials and labs: algorithms, data structures, programming, databases, systems.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="row">
-            <div><strong>Data Analyst</strong></div>
-            <div class="small">2021</div>
-          </div>
-          <p class="small muted" style="margin:5px 0">ClinFocus (Remote, USA)</p>
-          <ul class="compact">
-            <li>Processed and validated clinical trial data; automated queries and reporting (Python, SAS).</li>
-            <li>Supported database design and code reviews.</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -289,27 +229,17 @@
       <h3>Technical Skills</h3>
       <div class="grid">
         <div class="card span-6">
-          <h4>Core Competencies</h4>
+          <h4>Core</h4>
           <p><strong>Languages:</strong> Python, SQL, Java, R, MATLAB, SAS</p>
           <p><strong>Optimisation:</strong> Exact algorithms, heuristics, parameterised approaches; Gurobi, OR-Tools</p>
           <p><strong>Data:</strong> pandas, NumPy, PostgreSQL, MySQL</p>
         </div>
         <div class="card span-6">
-          <h4>ML & Engineering</h4>
+          <h4>ML & Tools</h4>
           <p><strong>ML:</strong> scikit-learn, PyTorch, Hugging Face Transformers</p>
-          <p><strong>Tools:</strong> Git/GitHub, Docker, unit testing</p>
-          <p><strong>Cloud:</strong> AWS (deployment experience)</p>
+          <p><strong>Tools:</strong> Git/GitHub, Docker</p>
+          <p><strong>Cloud:</strong> AWS</p>
         </div>
-      </div>
-
-      <div class="card" style="margin-top:12px">
-        <h4 style="margin-top:0">Community & Mentorship</h4>
-        <ul class="compact">
-          <li>Programme Coordinator, CSA Africa (2022–Present)</li>
-          <li>Mentor, Generating Genius (2024–2025)</li>
-          <li>Data for Good Hackathon, J.P. Morgan (2024)</li>
-          <li>Reviewer, Software Sustainability Institute (2025–Present)</li>
-        </ul>
       </div>
     </section>
 
@@ -318,18 +248,22 @@
       <h3>Get in Touch</h3>
       <div class="grid">
         <div class="card span-6">
-          <p class="muted">Open to conversations about AI/ML, research, data science, and optimisation/OR roles.</p>
+          <p class="muted">Email is best.</p>
           <p style="margin:12px 0 0">
             <strong>Email:</strong> <a href="mailto:ayegbapeaceo@gmail.com">ayegbapeaceo@gmail.com</a><br/>
-            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/peaceayegba" target="_blank" rel="noopener">/in/peaceayegba</a><br/>
-            <strong>GitHub:</strong> <a href="https://github.com/PeaceAyegba" target="_blank" rel="noopener">@PeaceAyegba</a><br/>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/peace-ayegba" target="_blank" rel="noopener">peace-ayegba</a><br/>
+            <strong>GitHub:</strong> <a href="https://github.com/PeaceAyegba" target="_blank" rel="noopener">PeaceAyegba</a><br/>
+            <strong>Kaggle:</strong> <a href="https://www.kaggle.com/peace1a" target="_blank" rel="noopener">peace1a</a><br/>
             <strong>Scholar:</strong> <a href="https://scholar.google.co.uk/citations?user=GadXMZ8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
           </p>
         </div>
 
         <div class="card span-6">
           <h4 style="margin-top:0">Summary</h4>
-          <p class="muted">PhD researcher with publications in combinatorial optimisation. Experience building reproducible Python implementations for algorithm development, benchmarking, and applied ML/NLP. Strong track record translating complex problems into models and clear results.</p>
+          <p class="muted">
+            Research Scientist with publications in combinatorial optimisation.
+            Experience building Python code for algorithm development, benchmarking, and applied ML/NLP projects.
+          </p>
           <p class="meta">Keywords: optimisation, OR, algorithms, integer programming, ML, NLP, transformers, Python</p>
         </div>
       </div>
