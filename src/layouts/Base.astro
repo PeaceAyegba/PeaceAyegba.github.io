@@ -1,0 +1,13 @@
+---
+import '../styles/global.css';
+import 'katex/dist/katex.min.css';
+const {title='Peace Ayegba | Research Scientist',description='Research in optimisation, algorithms, AI and machine learning.'}=Astro.props;
+const path=Astro.url.pathname;
+const links=[['/','Home'],['/about/','About'],['/research/','Research'],['/projects/','Projects'],['/writing/','Writing & Ideas']];
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content={description}/><title>{title}</title></head><body>
+<header class="site-header"><div class="container nav"><a class="brand" href="/">Peace<span>.</span> Ayegba</a><button id="menu" class="menu" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button><nav id="navlinks" class="navlinks" aria-label="Main navigation">{links.map(([href,label])=><a class={path===href?'current':''} href={href}>{label}</a>)}<a class="contact-nav" href="/contact/">Get in touch ↗</a></nav></div></header>
+<slot/>
+<footer class="footer"><div class="container footer-inner"><a class="footer-brand" href="/">Peace Ayegba<span>.</span></a><div class="footer-links"><a href="https://www.linkedin.com/in/peace-ayegba/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/peaceayegba" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:poayegba@gmail.com">Email</a></div></div></footer>
+<script>const menu=document.getElementById('menu');const links=document.getElementById('navlinks');menu?.addEventListener('click',()=>{const open=links?.classList.toggle('open');menu.setAttribute('aria-expanded',String(!!open))});links?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu?.setAttribute('aria-expanded','false')}));</script>
+</body></html>

@@ -1,0 +1,5 @@
+---
+import Base from './Base.astro';
+const {frontmatter}=Astro.props;
+---
+<Base title={`${frontmatter.title} | Peace Ayegba`} description={frontmatter.description}><header class="page-heading"><div class="container"><div class="eyebrow">{frontmatter.category} · {frontmatter.date}</div><h1>{frontmatter.title}</h1><p>{frontmatter.description}</p></div></header><article class="article"><a class="inline-link" href="/writing/">← All writing</a><slot/></article></Base>

@@ -1,56 +1,57 @@
-# Peace Ayegba — Personal Website
+# Peace Ayegba — Astro website
 
-This repository contains the source for my personal website.
+A responsive, static portfolio and technical writing site, configured for **https://peaceayegba.github.io**. Hosting on GitHub Pages is free.
 
-🔗 **Live site:**  
-https://peaceayegba.github.io
+## Preview on your computer
 
-The site highlights my work in optimisation, algorithms, machine learning, and data science.
+Requires Node.js 20.19+ or 22.12+ (or a newer compatible version).
 
+```bash
+npm install
+npm run dev
+```
+
+Open the address shown in the terminal, usually http://localhost:4321.
+
+## Deploy to GitHub Pages
+
+1. Back up the contents of your existing **peaceayegba.github.io** repository before replacing anything.
+2. Copy **all files in this folder** (including the hidden `.github` folder) into the root of that GitHub repository. Do not upload the ZIP itself as a single file.
+3. Open GitHub repository **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
+4. Commit the files on `main`; the workflow in `.github/workflows/deploy.yml` builds and publishes your website.
+5. Your public address remains https://peaceayegba.github.io/.
+
+## Publish a blog post (from GitHub's website)
+
+1. In your repository, open `src/pages/writing/`.
+2. Click **Add file → Create new file** (or the `+` menu) and name the new file `your-article.md`.
+3. Copy this template, replace the title and text, and click **Commit changes**:
+
+```markdown
+---
+layout: ../../layouts/Post.astro
+title: My New Article
+description: A short description of the article.
+category: Graph Algorithms
+date: 2026-11-06
 ---
 
-## Projects
+# Your article heading
 
-**Transformer Fine-Tuning for Text Classification**  
-Fine-tuned a RoBERTa transformer model for text classification using Hugging Face and PyTorch.  
-https://www.kaggle.com/code/peace1a/roberta-base
+Here is an inline equation $G=(V,E)$.
 
-**Malware Detection**  
-Machine learning models for detecting malicious PDF files, including Random Forest, XGBoost, and deep neural networks.  
-https://github.com/PeaceAyegba
+$$
+\min_{x \in X} f(x)
+$$
 
-**Housing Price Prediction**  
-Regression models with feature engineering and exploratory data analysis using scikit-learn and pandas.  
-https://github.com/PeaceAyegba/house-rent-prediction
+![My graph sketch](/images/my-graph.png)
+```
 
-**Graph Algorithms: MST Comparison**  
-Implementation and comparison of minimum spanning tree algorithms for graph optimisation problems.  
-https://github.com/PeaceAyegba/MST-Algorithms
+4. To use a diagram, export the drawing from your iPad to PNG and upload it into `public/images` through GitHub's **Add file → Upload files**. Then reference the image as shown above.
+5. Every new `.md` article in `src/pages/writing` is automatically included in the Writing & Ideas listing when GitHub rebuilds the site.
 
----
+The example post is **not an actual published article**; delete or replace it when ready. Mathematical notation is typeset using KaTeX, via Astro Markdown plugins. No CMS or subscription is required.
 
-## Research
+## Contact
 
-My research focuses on:
-
-- Combinatorial optimisation  
-- Exact and heuristic algorithms  
-- Integer programming  
-- Machine learning and NLP  
-- Algorithm benchmarking and evaluation
-
----
-
-## Links
-
-**LinkedIn**  
-https://www.linkedin.com/in/peace-ayegba
-
-**GitHub**  
-https://github.com/PeaceAyegba
-
-**Kaggle**  
-https://www.kaggle.com/peace1a
-
-**Google Scholar**  
-https://scholar.google.co.uk/citations?user=GadXMZ8AAAAJ
+Email: poayegba@gmail.com
