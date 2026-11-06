@@ -5,21 +5,21 @@ const posts = Object.values(import.meta.glob('./writing/*.md',{eager:true})).map
 <Base>
   <section class="hero"><div class="container hero-inner"><div class="hero-copy">
     <div class="eyebrow">Research Scientist · Optimisation · Algorithms</div>
-    <h1>Exploring ideas.<br /><em>Solving hard problems.</em></h1>
-    <p>I'm Peace Ayegba, a research scientist interested in mathematical optimisation, algorithms, artificial intelligence and machine learning. This is where I share my research, projects and the ideas I'm exploring along the way.</p>
+    <h1><em>Solving hard problems.</em></h1>
+    <p>Hi, I'm Peace Ayegba, a research scientist interested in mathematical optimisation, algorithms, and artificial intelligence. This is where I share my research, projects and the ideas I'm exploring along the way.</p>
     <div class="actions"><a class="btn" href="/research/">Explore my research ↗</a><a class="btn btn-outline" href="/writing/">Writing & Ideas</a></div>
   </div></div></section>
   <main class="container home-main">
     <section class="home-about"><div class="eyebrow">About me</div><h2>A little about me.</h2>
       <p>I hold a PhD in Computing Science from the University of Glasgow, where my research focused on stable matching problems, their mathematical structures and algorithms.</p>
-      <p>My interests include combinatorial optimisation, graph algorithms and computational complexity, alongside artificial intelligence and machine learning. I enjoy exploring challenging problems and developing methods to solve them.</p>
+      <p>My interests include combinatorial optimisation, graph algorithms and computational complexity, alongside artificial intelligence. I enjoy exploring challenging problems and developing methods to solve them.</p>
       <a class="inline-link" href="/about/">More about me ↗</a>
     </section>
     <section class="home-section"><div class="section-top"><div><div class="eyebrow">Research</div><h2>My research</h2></div><a class="inline-link" href="/research/">Research & publications ↗</a></div>
       <div class="research-grid"><article class="card"><div class="num">01 — OPTIMISATION</div><h3>Optimisation & Algorithms</h3><p>Stable matching, graph algorithms, combinatorial optimisation and computational complexity.</p></article><article class="card"><div class="num">02 — AI & ML</div><h3>Artificial Intelligence & Machine Learning</h3><p>Exploring learning-based methods, mathematical foundations and their applications to computational problems.</p></article></div>
     </section>
     <section class="home-section"><div class="section-top"><div><div class="eyebrow">Selected work</div><h2>My ideas in practice.</h2></div><a class="inline-link" href="/projects/">All projects ↗</a></div>
-      <div class="feature"><div class="feature-copy"><div class="eyebrow">Graph algorithms · Research implementation</div><h2>From theory to algorithms.</h2><p>Implementing and comparing algorithms for graph problems, exploring computational efficiency and practical performance.</p><a class="inline-link" href="https://github.com/PeaceAyegba/MST-Algorithms" target="_blank" rel="noopener noreferrer">Explore minimum spanning trees ↗</a></div><div class="feature-art" aria-hidden="true"><div class="art-circle"></div><div class="art-circle art-circle-two"></div><div class="art-line"></div><div class="art-label">Theory → Practice</div></div></div>
+      <div class="feature"><div class="feature-copy"><div class="eyebrow">Graph algorithms · Research</div><h2>From theory to algorithms.</h2><p>Implementing and comparing algorithms for graph problems, exploring computational efficiency and performance in practise.</p><a class="inline-link" href="https://github.com/PeaceAyegba/MST-Algorithms" target="_blank" rel="noopener noreferrer">Explore minimum spanning trees ↗</a></div><div class="feature-art" aria-hidden="true"><div class="art-circle"></div><div class="art-circle art-circle-two"></div><div class="art-line"></div><div class="art-label">Theory → Practice</div></div></div>
     </section>
     <section class="home-section"><div class="section-top"><div><div class="eyebrow">Writing & Ideas</div><h2>Writing & Ideas</h2></div><a class="inline-link" href="/writing/">View writing ↗</a></div>
       <div class="post-grid home-post-grid">{posts.map((post,i)=><a class="post-card" href={post.url}><div class={`post-art post-art-${i%3}`}>{i%3===0?'G = (V, E)':i%3===1?'min f(x)':'ideas'}</div><div class="post-info"><div class="tag">{post.frontmatter.category} · {post.frontmatter.date}</div><h3>{post.frontmatter.title}</h3><p>{post.frontmatter.description}</p></div></a>)}</div>
