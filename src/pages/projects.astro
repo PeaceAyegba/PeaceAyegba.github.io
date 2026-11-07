@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+const projects=[
+{tag:'Graph Algorithms',title:'Minimum Spanning Trees',description:"Implementing and comparing Prim's and Kruskal's algorithms.",url:'https://github.com/PeaceAyegba/MST-Algorithms',label:'View project'},
+{tag:'Machine Learning',title:'House Rent Prediction',description:'Regression modelling and exploratory data analysis.',url:'https://github.com/PeaceAyegba/house-rent-prediction',label:'View project'},
+{tag:'NLP',title:'Transformer Fine-Tuning',description:'RoBERTa for text classification.',url:'https://www.kaggle.com/code/peace1a/roberta-base',label:'View notebook'}];
 ---
-<Base title="Projects | Peace Ayegba"><header class="page-heading"><div class="container"><div class="eyebrow">Projects</div><h1>My ideas in practice.</h1><p>Selected research implementations and computational projects.</p></div></header><main class="container page-main"><div class="project-grid">
-<article class="card"><div class="num">GRAPH ALGORITHMS</div><h3>Minimum Spanning Trees</h3><p>Implementing and comparing Prim's and Kruskal's algorithms.</p><a class="inline-link" href="https://github.com/PeaceAyegba/MST-Algorithms" target="_blank" rel="noopener noreferrer">View project ↗</a></article>
-<article class="card"><div class="num">MACHINE LEARNING</div><h3>House Rent Prediction</h3><p>Regression modelling, exploratory analysis and feature engineering.</p><a class="inline-link" href="https://github.com/PeaceAyegba/house-rent-prediction" target="_blank" rel="noopener noreferrer">View project ↗</a></article>
-<article class="card"><div class="num">NLP</div><h3>Transformer Fine-Tuning</h3><p>RoBERTa fine-tuning for text classification.</p><a class="inline-link" href="https://www.kaggle.com/code/peace1a/roberta-base" target="_blank" rel="noopener noreferrer">View notebook ↗</a></article>
-</div></main></Base>
+<Base title="Personal Projects | Peace Ayegba"><header class="inner-banner"><div class="container inner-banner-grid"><div><div class="eyebrow">Selected work</div><h1>Personal Projects</h1></div><p>Some of the algorithms and machine learning projects I've worked on.</p></div></header><main class="container inner-main"><div class="projects-grid">{projects.map(project=><article class="project-card"><div class="eyebrow">{project.tag}</div><h3>{project.title}</h3><p>{project.description}</p><a href={project.url} target="_blank" rel="noopener noreferrer">{project.label} ↗</a></article>)}</div></main></Base>

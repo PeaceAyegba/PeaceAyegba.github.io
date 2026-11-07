@@ -1,5 +1,44 @@
 ---
-import Base from '../../layouts/Base.astro';
-const posts=Object.values(import.meta.glob('./*.md',{eager:true})).map((p:any)=>({frontmatter:p.frontmatter,url:p.url})).sort((a,b)=>String(b.frontmatter.date).localeCompare(String(a.frontmatter.date)));
+import Base from "../../layouts/Base.astro";
+const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
+  .map((p: any) => ({ frontmatter: p.frontmatter, url: p.url }))
+  .sort((a, b) =>
+    String(b.frontmatter.date).localeCompare(String(a.frontmatter.date)),
+  );
 ---
-<Base title="Writing & Ideas | Peace Ayegba"><header class="page-heading"><div class="container"><div class="eyebrow">Articles & notes</div><h1>Writing & Ideas.</h1><p>Mathematics, algorithms, AI, machine learning and other things I find interesting.</p></div></header><main class="container page-main"><div class="post-grid">{posts.map((post,i)=><a class="post-card" href={post.url}><div class={`post-art post-art-${i%3}`}>{i%3===0?'G = (V, E)':i%3===1?'min f(x)':'ideas'}</div><div class="post-info"><div class="tag">{post.frontmatter.category} · {post.frontmatter.date}</div><h3>{post.frontmatter.title}</h3><p>{post.frontmatter.description}</p><span class="inline-link">Read article ↗</span></div></a>)}</div></main></Base>
+
+<Base title="Writing & Ideas | Peace Ayegba"
+  ><header class="inner-banner">
+    <div class="container inner-banner-grid">
+      <div>
+        <div class="eyebrow">Articles & notes</div><h1>Writing & Ideas</h1>
+      </div><p>
+        Algorithms, mathematics, AI and other things I find interesting.
+      </p>
+    </div>
+  </header><main class="container inner-main">
+    <div class="posts-grid">
+      {
+        posts.map((post, i) => (
+          <a class="post-card" href={post.url}>
+            <>
+              <div class={`post-art art-${i % 2}`}>
+                {i % 2 === 0 ? "G = (V, E)" : "min f(x)"}
+              </div>
+              <div class="post-content">
+                <>
+                  <div class="eyebrow">
+                    {post.frontmatter.category} · {post.frontmatter.date}
+                  </div>
+                  <h3>{post.frontmatter.title}</h3>
+                  <p>{post.frontmatter.description}</p>
+                  <span class="inline-link">Read article ↗</span>
+                </>
+              </div>
+            </>
+          </a>
+        ))
+      }
+    </div>
+  </main></Base
+>
